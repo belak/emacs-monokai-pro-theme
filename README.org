@@ -6,7 +6,7 @@
 
 *** package.el
 
-base16-theme is available in [[https://melpa.org/#/base16-theme][MELPA]].
+monokai-pro-theme is available in [[https://melpa.org/#/monokai-pro-theme][MELPA]].
 
 You can install it with the following command:
 
