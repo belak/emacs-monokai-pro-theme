@@ -1,0 +1,61 @@
+[[http://melpa.org/#/monokai-pro-theme][file:http://melpa.org/packages/monokai-pro-theme-badge.svg]]
+
+* Monokai Pro themes for Emacs
+
+** Installation
+
+*** package.el
+
+base16-theme is available in [[https://melpa.org/#/base16-theme][MELPA]].
+
+You can install it with the following command:
+
+#+begin_src text
+  M-x package-install monokai-pro-theme
+#+end_src
+
+To load one of the themes on emacs startup, add this to your init
+file:
+
+#+begin_src emacs-lisp
+  (load-theme 'monokai-pro t)
+#+end_src
+
+*** use-package
+
+The use-package block is fairly similar to package.el.
+
+#+begin_src emacs-lisp
+  (use-package monokai-pro-theme
+    :ensure t
+    :config
+    (load-theme 'monokai-pro t))
+#+end_src
+
+Note that use-package tries to defer packages if at all possible, so
+you may need to add =:demand= to the use-package block.
+
+** Development
+
+Above, there's a use-package block listed for general use, but if you
+want to run these themes out of the git repo, there's a bit more work
+which needs to be done. I use something similar to the following:
+
+#+begin_src emacs-lisp
+  (use-package monokai-pro-theme
+    :ensure nil
+    :load-path "site-lisp/monokai-pro-theme"
+    :config
+    (load-theme 'monokai-pro t))
+#+end_src
+
+This block assumes the repo is cloned to
+~/.emacs.d/site-lisp/monokai-pro-theme. That needs to be added to the
+load path (along with specifying =:ensure nil= if needed so use-package
+doesn't try to grab the package from melpa). Additionally, the build
+directory needs to be added to the =custom-theme-load-path= to ensure
+load-theme can find the themes.
+
+* Credits
+
+Current maintainer: [[https://github.com/belak][belak]]
