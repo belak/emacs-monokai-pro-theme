@@ -6,22 +6,6 @@
 ;; Maintainer: Kaleb Elwert <kaleb@coded.io>
 ;; Version: 0.1
 ;; URL: https://github.com/belak/emacs-monokai-pro-theme
-;; Keywords: lisp
-
-;; This file is NOT part of GNU Emacs.
-
-;; This program is free software; you can redistribute it and/or modify
-;; it under the terms of the GNU General Public License as published by
-;; the Free Software Foundation, either version 3 of the License, or
-;; (at your option) any later version.
-
-;; This program is distributed in the hope that it will be useful,
-;; but WITHOUT ANY WARRANTY; without even the implied warranty of
-;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-;; GNU General Public License for more details.
-
-;; You should have received a copy of the GNU General Public License
-;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ;;; Commentary:
 
@@ -29,7 +13,7 @@
 
 ;;; Code:
 
-(defvar monokai-pro-colors
+(defvar monokai-pro-theme-colors
   '(;; Background and foreground colors
     :bg     "#2d2a2e"
     :bg+1   "#353236"
@@ -49,7 +33,6 @@
     :blue   "#78dce8"
     :purple "#ab9df2"
     :pink   "#ff6188"))
-
 
 (defun monokai-pro-theme-transform-spec (spec colors)
   "Transform a theme `SPEC' into a face spec using `COLORS'."
@@ -92,7 +75,7 @@
 (deftheme monokai-pro)
 (monokai-pro-theme-set-faces
  'monokai-pro
- monokai-pro-colors
+ monokai-pro-theme-colors
 
  '(
 ;;; Built-in
@@ -225,14 +208,14 @@
    ))
 
 ;; Anything leftover that doesn't fall neatly into a face goes here.
-(let ((bg      (plist-get monokai-pro-colors :bg))
-      (fg      (plist-get monokai-pro-colors :fg))
-      (red     (plist-get monokai-pro-colors :red))
-      (green   (plist-get monokai-pro-colors :green))
-      (yellow  (plist-get monokai-pro-colors :yellow))
-      (blue    (plist-get monokai-pro-colors :blue))
-      (magenta (plist-get monokai-pro-colors :purple))
-      (cyan    (plist-get monokai-pro-colors :pink)))
+(let ((bg      (plist-get monokai-pro-theme-colors :bg))
+      (fg      (plist-get monokai-pro-theme-colors :fg))
+      (red     (plist-get monokai-pro-theme-colors :red))
+      (green   (plist-get monokai-pro-theme-colors :green))
+      (yellow  (plist-get monokai-pro-theme-colors :yellow))
+      (blue    (plist-get monokai-pro-theme-colors :blue))
+      (magenta (plist-get monokai-pro-theme-colors :purple))
+      (cyan    (plist-get monokai-pro-theme-colors :pink)))
   (custom-theme-set-variables
    'monokai-pro
    `(ansi-color-names-vector
