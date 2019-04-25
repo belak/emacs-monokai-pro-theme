@@ -2,6 +2,10 @@
 
 * Monokai Pro themes for Emacs
 
+** Preview
+
+[[./preview.png]]
+
 ** Installation
 
 *** package.el
