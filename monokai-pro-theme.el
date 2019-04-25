@@ -1,4 +1,4 @@
-;;; monokai-pro-theme.el --- A simple grayscale theme
+;;; monokai-pro-theme.el --- A simple theme based on the Monokai Pro Sublime color schemes
 
 ;; Copyright (C) 2019  Kaleb Elwert
 
@@ -43,17 +43,20 @@
              (color-key (if (symbolp value) (intern (concat ":" (symbol-name value))) nil))
              (color     (plist-get colors color-key)))
 
-        ;; Append the transformed element
+        ;; Prepend the transformed element
         (cond
          ((and (memq key '(:box :underline)) (listp value))
-          (setq output (append output (list key (monokai-pro-theme-transform-spec value colors)))))
+          (push (monokai-pro-theme-transform-spec value colors) output))
          (color
-          (setq output (append output (list key color))))
+          (push color output))
          (t
-          (setq output (append output (list key value))))))
+          (push value output)))
+
+      ;; Prepend the actual key
+      (push key output)
 
       ;; Go to the next element in the list
-      (setq spec (cddr spec)))
+      (setq spec (cddr spec))))
 
     ;; Return the transformed spec
     output))
