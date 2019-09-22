@@ -168,10 +168,10 @@
    (company-tooltip-selection                    :background bg+1)
    (company-preview-common                       :foreground fg-1 :background blue)
 
-   ;; ;;;; diff-hl-mode
-   ;;    (diff-hl-change                               :background blue  :foreground blue+1)
-   ;;    (diff-hl-delete                               :background red   :foreground red+1)
-   ;;    (diff-hl-insert                               :background green :foreground green+1)
+;;;; diff-hl-mode
+   (diff-hl-change                               :foreground blue)
+   (diff-hl-delete                               :foreground red)
+   (diff-hl-insert                               :foreground green)
 
 ;;;; diff-mode
    (diff-added                                   :foreground green)
