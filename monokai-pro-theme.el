@@ -205,7 +205,7 @@
    (ido-vertical-match-face                      :foreground fg-1)
 
 ;;;; show-paren-mode
-   (show-paren-match                             :inverse-video t)
+   (show-paren-match                             :foreground fg :background blue)
    (show-paren-mismatch                          :background red :inverse-video t)
 
    ))
