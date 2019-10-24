@@ -5,6 +5,7 @@
 ;; Author: Kaleb Elwert <kaleb@coded.io>
 ;; Maintainer: Kaleb Elwert <kaleb@coded.io>
 ;; Version: 0.1
+;; Package-Version: 20190924.2152
 ;; URL: https://github.com/belak/emacs-monokai-pro-theme
 
 ;;; Commentary:
@@ -155,6 +156,17 @@
 
 ;;; Third-party
 
+;;;; rainbow-delimiters
+   (rainbow-delimiters-depth-1-face		 :foreground red)
+   (rainbow-delimiters-depth-2-face		 :foreground pink)
+   (rainbow-delimiters-depth-3-face		 :foreground orange)
+   (rainbow-delimiters-depth-4-face		 :foreground yellow)
+   (rainbow-delimiters-depth-5-face		 :foreground green)
+   (rainbow-delimiters-depth-6-face		 :foreground blue)
+   (rainbow-delimiters-depth-7-face		 :foreground purple)
+   (rainbow-delimiters-depth-8-face		 :foreground fg-1)
+   (rainbow-delimiters-depth-9-face		 :foreground fg)
+   
 ;;;; anzu-mode
    ;;    (anzu-mode-line                               :foreground yellow)
 
