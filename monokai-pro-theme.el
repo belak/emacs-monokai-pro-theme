@@ -35,6 +35,113 @@
     :purple "#ab9df2"
     :pink   "#ff6188"))
 
+(defvar monokai-pro-ristretto-theme-colors
+  '(;; Background and foreground colors
+    :bg     "#2C2525"
+    :bg+1   "#403838"
+    :bg+2   "#5B5353"
+    :fg-4   "#72696A"
+    :fg-3   "#948A8B"
+    :fg-2   "#B5A9AA"
+    :fg-1   "#FFF1F3"
+    :fg     "#FFF8F9"
+
+    ;; General colors
+    :white  "#ffffff"
+    :red    "#FD6883"
+    :orange "#F38D70"
+    :yellow "#F9CC6C"
+    :green  "#ADDA78"
+    :blue   "#85DACC"
+    :purple "#A8A9EB"
+    :pink   "#FD6883"))
+
+(defvar monokai-pro-spectrum-theme-colors
+  '(;; Background and foreground colors
+    :bg     "#222222"
+    :bg+1   "#363537"
+    :bg+2   "#525053"
+    :fg-4   "#69676C"
+    :fg-3   "#8B888F"
+    :fg-2   "#BAB6BF"
+    :fg-1   "#F7F1FF"
+    :fg     "#FBF8FF"
+
+    ;; General colors
+    :white  "#ffffff"
+    :red    "#FC618D"
+    :orange "#FD9353"
+    :yellow "#FCE566"
+    :green  "#7BD88F"
+    :blue   "#5AD4E6"
+    :purple "#948AE3"
+    :pink   "#FC618D"))
+
+(defvar monokai-pro-machine-theme-colors
+  '(;; Background and foreground colors
+    :bg     "#273136"
+    :bg+1   "#3A4449"
+    :bg+2   "#545F62"
+    :fg-4   "#6B7678"
+    :fg-3   "#8B9798"
+    :fg-2   "#B4C3C4"
+    :fg-1   "#F2FFFC"
+    :fg     "#F9FFFE"
+
+    ;; General colors
+    :white  "#ffffff"
+    :red    "#FF6D7E"
+    :orange "#FFB270"
+    :yellow "#FFED72"
+    :green  "#A2E57B"
+    :blue   "#7CD5F1"
+    :purple "#BAA0F8"
+    :pink   "#FF6D7E"))
+
+
+(defvar monokai-pro-octagon-theme-colors
+  '(;; Background and foreground colors
+    :bg     "#282A3A"
+    :bg+1   "#3A3D4B"
+    :bg+2   "#535763"
+    :fg-4   "#696D77"
+    :fg-3   "#888D94"
+    :fg-2   "#A0A5AE"
+    :fg-1   "#EAF2F1"
+    :fg     "#F5F9F8"
+
+    ;; General colors
+    :white  "#ffffff"
+    :red    "#FF657A"
+    :orange "#FF9B5E"
+    :yellow "#FFD76D"
+    :green  "#BAD761"
+    :blue   "#9CD1BB"
+    :purple "#C39AC9"
+    :pink   "#FF657A"))
+
+
+(defvar monokai-pro-classic-theme-colors
+  '(;; Background and foreground colors
+    :bg     "#272821"
+    :bg+1   "#3B3C35"
+    :bg+2   "#57584F"
+    :fg-4   "#6E7066"
+    :fg-3   "#919288"
+    :fg-2   "#ABACA0"
+    :fg-1   "#FDFFF1"
+    :fg     "#FEFFF8"
+
+    ;; General colors
+    :white  "#ffffff"
+    :red    "#F82570"
+    :orange "#FC961F"
+    :yellow "#E4DB73"
+    :green  "#A6E12D"
+    :blue   "#66D9EE"
+    :purple "#AE81FF"
+    :pink   "#F82570"))
+
 (defun monokai-pro-theme-transform-spec (spec colors)
   "Transform a theme `SPEC' into a face spec using `COLORS'."
   (let ((output))
@@ -76,12 +183,8 @@
                      (monokai-pro-theme-transform-face face colors))
                  faces)))
 
-(deftheme monokai-pro)
-(monokai-pro-theme-set-faces
- 'monokai-pro
- monokai-pro-theme-colors
-
- '(
+(defvar monokai-pro-faces
+  '(
 ;;; Built-in
 
 ;;;; basic colors
@@ -232,6 +335,12 @@
 
    ))
 
+(deftheme monokai-pro)
+(monokai-pro-theme-set-faces
+ 'monokai-pro
+ monokai-pro-theme-colors
+ monokai-pro-faces
+ )
 ;; Anything leftover that doesn't fall neatly into a face goes here.
 (let ((bg      (plist-get monokai-pro-theme-colors :bg))
       (fg      (plist-get monokai-pro-theme-colors :fg))
