@@ -187,6 +187,8 @@
    (popup-menu-face                              :background bg+2)
    (popup-menu-mouse-face			 :background bg+1)
    (popup-tip-face				 :background bg+2)
+   (popup-scroll-bar-background-face             :background bg+1)
+   (popup-scroll-bar-foreground-face             :background fg-1)
    
 ;;;; diff-hl-mode
    (diff-hl-change                               :foreground blue)
