@@ -156,17 +156,6 @@
 
 ;;; Third-party
 
-;;;; rainbow-delimiters
-   (rainbow-delimiters-depth-1-face		 :foreground red)
-   (rainbow-delimiters-depth-2-face		 :foreground pink)
-   (rainbow-delimiters-depth-3-face		 :foreground orange)
-   (rainbow-delimiters-depth-4-face		 :foreground yellow)
-   (rainbow-delimiters-depth-5-face		 :foreground green)
-   (rainbow-delimiters-depth-6-face		 :foreground blue)
-   (rainbow-delimiters-depth-7-face		 :foreground purple)
-   (rainbow-delimiters-depth-8-face		 :foreground fg-1)
-   (rainbow-delimiters-depth-9-face		 :foreground fg)
-   
 ;;;; anzu-mode
    ;;    (anzu-mode-line                               :foreground yellow)
 
@@ -180,6 +169,25 @@
    (company-tooltip-selection                    :background bg+1)
    (company-preview-common                       :foreground fg-1 :background blue)
 
+
+;;;; rainbow-delimiters
+   (rainbow-delimiters-depth-1-face		 :foreground red)
+   (rainbow-delimiters-depth-2-face		 :foreground pink)
+   (rainbow-delimiters-depth-3-face		 :foreground orange)
+   (rainbow-delimiters-depth-4-face		 :foreground yellow)
+   (rainbow-delimiters-depth-5-face		 :foreground green)
+   (rainbow-delimiters-depth-6-face		 :foreground blue)
+   (rainbow-delimiters-depth-7-face		 :foreground purple)
+   (rainbow-delimiters-depth-8-face		 :foreground fg-1)
+   (rainbow-delimiters-depth-9-face		 :foreground fg)
+
+;;;; popup
+   (popup-menu-selection-face			 :background bg+1)
+   (popup-summary-face				 :background bg+2 :inherit default)
+   (popup-menu-face                              :background bg+2)
+   (popup-menu-mouse-face			 :background bg+1)
+   (popup-tip-face				 :background bg+2)
+   
 ;;;; diff-hl-mode
    (diff-hl-change                               :foreground blue)
    (diff-hl-delete                               :foreground red)
