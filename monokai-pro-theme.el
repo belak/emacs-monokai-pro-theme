@@ -105,6 +105,7 @@
    (region                                       :background bg+2)
    (secondary-selection                          :background bg+2)
    (trailing-whitespace                          :foreground fg :background red)
+   (whitespace-trailing                          :inherit trailing-whitespace)
    (widget-button                                :underline t)
    (widget-field                                 :background fg-1 :box (:line-width 1 :color bg+2))
 
