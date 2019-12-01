@@ -259,6 +259,34 @@
 
 ;;; Third-party
 
+;;;; php-mode
+   (php-function-name				 :foreground green)
+   (php-function-call				 :foreground green)
+   (php-string 					 :foreground yellow)
+   (php-keyword 				 :foreground red)
+   (php-builtin 				 :foreground purple)
+   (php-method-call 				 :foreground green)
+   (php-static-method-call 			 :foreground green)
+   (php-variable-name 				 :foreground fg)
+   (php-property-name 				 :foreground fg)
+   (php-variable-sigil 				 :foreground fg-2)
+   (php-operator                                 :foreground red)
+   (php-paamayim-nekudotayim 			 :foreground red)
+   (php-type 					 :foreground blue :slant italic)
+   (php-class 					 :foreground blue)
+   (php-constant 				 :foreground purple)
+   (php-constant-assign 			 :foreground blue)
+   (php-magical-constant 			 :foreground purple)
+   (php-$this 					 :foreground fg-2)
+   (php-$this-sigil				 :foreground fg-2)
+   (php-errorcontrol-op 			 :foreground red)
+   (php-doc-annotation-tag 			 :foreground blue)
+   (php-doc-variable-sigil 			 :foreground fg-4)
+   (php-doc-$this 				 :foreground fg-4)
+   (php-doc-$this-sigil 			 :foreground fg-4)
+   (php-doc-class-name 				 :foreground fg-4)
+
+
 ;;;; anzu-mode
    ;;    (anzu-mode-line                               :foreground yellow)
 
