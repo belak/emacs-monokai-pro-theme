@@ -263,7 +263,7 @@
    (php-function-name				 :foreground green)
    (php-function-call				 :foreground green)
    (php-string 					 :foreground yellow)
-   (php-keyword 				 :foreground red)
+   (php-keyword 				 :foreground blue)
    (php-builtin 				 :foreground purple)
    (php-method-call 				 :foreground green)
    (php-static-method-call 			 :foreground green)
