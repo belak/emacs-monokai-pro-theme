@@ -193,7 +193,7 @@
    (default                                      :foreground fg :background bg)
 
    ;; TODO: bg matches what's in the sublime theme here, not bg+2
-   (fringe                                       :background bg+2)
+   (fringe                                       :background bg)
 
    ;;(gui-element                                  :background bg+1)
    (header-line                                  :background nil :inherit mode-line)
