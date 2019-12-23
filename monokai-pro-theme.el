@@ -283,7 +283,7 @@
    (php-operator                                 :foreground red)
    (php-paamayim-nekudotayim 			 :foreground red)
    (php-type 					 :foreground blue :slant italic)
-   (php-class 					 :foreground blue)
+   (php-class 					 :foreground red)
    (php-constant 				 :foreground purple)
    (php-constant-assign 			 :foreground blue)
    (php-magical-constant 			 :foreground purple)
