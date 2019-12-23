@@ -257,6 +257,16 @@
    (mode-line-highlight                          :foreground fg :box nil :weight bold)
    (mode-line-inactive                           :foreground fg-2 :background bg+2)
 
+;;; term
+   (term-color-black				 :foreground bg+1)
+   (term-color-blue				 :foreground blue)
+   (term-color-cyan				 :foreground purple)
+   (term-color-green				 :foreground green)
+   (term-color-magenta				 :foreground pink)
+   (term-color-red				 :foreground red)
+   (term-color-white				 :foreground fg)
+   (term-color-yellow				 :foreground yellow)
+   
 ;;; Third-party
 
 ;;;; php-mode
