@@ -270,6 +270,29 @@
 ;;; Third-party
 
 ;;;; php-mode
+   (php-block-delimiter				 :foreground fg-3)
+   (php-block-statement				 :foreground red)
+   (php-class-declaration-spec 			 :foreground red)
+   (php-class-modifiers 			 :foreground red)
+   (php-constant-assign 			 :foreground red)
+   (php-constant-keyword 			 :foreground purple)
+   (php-flow-control-statement			 :foreground red)
+   (php-import-declaration 			 :foreground red)
+   (php-include-statement 			 :foreground green)
+   (php-method-access				 :foreground red :slant italic)
+   (php-method-modifiers			 :foreground red :slant italic)
+   (php-method-static				 :foreground red :slant italic)
+   (php-namespace-declaration			 :foreground red)
+   (php-number					 :foreground purple)
+   (php-php-tag 				 :foreground orange)
+   (php-print-statement				 :foreground green)
+   (php-property-access 			 :foreground red :slant italic)
+   (php-property-const				 :foreground red :slant italic)
+   (php-property-static				 :foreground red :slant italic)
+   (php-string-quote				 :foreground fg-3)
+   (php-type-operator				 :foreground red)
+   (php-function-keyword 			 :foreground blue :slant italic)
+
    (php-function-name				 :foreground green)
    (php-function-call				 :foreground green)
    (php-string 					 :foreground yellow)
@@ -287,8 +310,8 @@
    (php-constant 				 :foreground purple)
    (php-constant-assign 			 :foreground blue)
    (php-magical-constant 			 :foreground purple)
-   (php-$this 					 :foreground fg-2)
-   (php-$this-sigil				 :foreground fg-2)
+   (php-$this 					 :foreground fg-2 :slant italic)
+   (php-$this-sigil				 :foreground fg-2 :slant italic)
    (php-errorcontrol-op 			 :foreground red)
    (php-doc-annotation-tag 			 :foreground blue)
    (php-doc-variable-sigil 			 :foreground fg-4)
@@ -368,8 +391,8 @@
    (ido-vertical-match-face                      :foreground fg-1)
 
 ;;;; show-paren-mode
-   (show-paren-match                             :foreground fg :background blue)
-   (show-paren-mismatch                          :background red :inverse-video t)
+   (show-paren-match                             :foreground nil :background nil :box (:line-width 1 :color green))
+   (show-paren-mismatch                          :foreground nil :background nil :box (:line-width 1 :color red))
 
    ))
 
