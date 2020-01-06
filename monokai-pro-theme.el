@@ -243,13 +243,14 @@
    (isearch-fail                                 :foreground red :background fg)
 
 ;;;; line-numbers
-   (line-number                                  :foreground fg-2)
-   (line-number-current-line                     :foreground bg+2 :inverse-video t :inherit line-number)
+   (line-number                                  :foreground bg+2)
+   (line-number-current-line                     :foreground bg+1 :inverse-video t :inherit line-number)
 
 ;;;; linum-mode
-   (linum                                        :foreground fg-3 :inherit fringe)
-   (linum-highlight-face                         :foreground bg+2 :background fg-2)
-
+   (linum                                        :foreground bg+2 :inherit fringe)
+   (linum-highlight-face                         :foreground red :background bg)
+   (linum-relative-current-face 		 :foreground red :background bg :weight bold)
+   
 ;;;; mode-line
    (mode-line                                    :foreground fg-2 :background bg+1)
    (mode-line-buffer-id                          :foreground yellow :background nil)
