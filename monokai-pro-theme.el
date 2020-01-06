@@ -198,6 +198,9 @@
    ;;(gui-element                                  :background bg+1)
    (header-line                                  :background nil :inherit mode-line)
 
+   ;; vertical border
+   (vertical-border 				 :foreground bg+1)
+   
    ;; TODO: This matches highlight and findHighlight, but we may want
    ;; to look at findHighlightForeground which is simply bg.
    (highlight                                    :foreground fg-3 :background bg+1)
