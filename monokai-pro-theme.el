@@ -246,8 +246,8 @@
    (isearch-fail                                 :foreground red :background fg)
 
 ;;;; line-numbers
-   (line-number                                  :foreground bg+2)
-   (line-number-current-line                     :foreground bg+1 :inverse-video t :inherit line-number)
+   (line-number                                  :foreground bg+2 :height 90)
+   (line-number-current-line 			:inherit line-number)
 
 ;;;; linum-mode
    (linum                                        :foreground bg+2 :inherit fringe)
@@ -272,6 +272,59 @@
    (term-color-yellow				 :foreground yellow)
    
 ;;; Third-party
+
+;;; ivy
+   (ivy-action 					 :foreground purple)
+   (ivy-confirm-face 				 :foreground green)
+   (ivy-current-match 				 :foreground bg :background yellow)
+   (ivy-cursor 					 :foreground bg :background fg)
+   (ivy-grep-info 				 :foreground pink)
+   (ivy-grep-line-number			 :foreground red)
+   (ivy-highlight-face 				 :background bg+1 :foreground fg-1)
+   (ivy-match-required-face 			 :foreground red)
+   (ivy-minibuffer-match-face-1 		 :foreground fg :background bg+1)
+   (ivy-minibuffer-match-face-2 		 :foreground fg :background bg+2)
+   (ivy-minibuffer-match-face-3 		 :foreground fg :background purple)
+   (ivy-minibuffer-match-face-4 		 :foreground fg :background pink)
+   (ivy-minibuffer-match-highlight 		 :foreground fg-4 :background bg+1)
+   (ivy-modified-buffer 			 :foreground fg)
+   (ivy-modified-outside-buffer 		 :foreground fg)
+   (ivy-org 					 :foreground bg+1 :slant italic)
+   (ivy-prompt-match 				 :foreground bg :background yellow)
+   (ivy-remote 					 :foreground purple)
+   (ivy-separator 				 :foreground bg+1)
+   (ivy-subdir 					 :foreground green)
+   (ivy-virtual 				 :foreground purple)
+   (ivy-yanked-word 				 :foreground fg-4 :background bg+1)
+   (swiper-background-match-face-1 		 :foreground bg :background fg)
+   (swiper-background-match-face-2 		 :foreground bg :background yellow)
+   (swiper-background-match-face-3 		 :foreground bg :background yellow :weight bold)
+   (swiper-background-match-face-4 		 :foreground red :background fg)
+   (swiper-match-face-1		 		 :foreground bg :background fg)
+   (swiper-match-face-2		 		 :foreground bg :background yellow)
+   (swiper-match-face-3 			 :foreground bg :background yellow :weight bold)
+   (swiper-match-face-4 			 :foreground red :background fg)
+   (swiper-line-face 				 :foreground bg+2 :background bg+1)
+
+;;; lsp-ui
+   (lsp-ui-doc-background 			 :background bg+1)
+   (lsp-ui-peek-filename 			 :foreground orange)
+   (lsp-ui-peek-header 				 :foreground bg :background fg)
+   (lsp-ui-peek-footer 				 :foreground bg :background fg)
+   (lsp-ui-peek-peek 				 :foreground fg :background bg+1)
+   (lsp-ui-peek-highlight 			 :foreground fg-1)
+   (lsp-ui-peek-selection 			 :foreground fg-1 :background bg+2)
+   (lsp-ui-peek-list 				 :background bg+1)
+   (lsp-ui-peek-line-number 			 :foreground red)
+   
+;;; all-the-icons
+   (all-the-icons-red 				 :foreground red)
+   (all-the-icons-blue 				 :foreground blue)
+   (all-the-icons-green				 :foreground green)
+   (all-the-icons-yellow			 :foreground yellow)
+   (all-the-icons-purple			 :foreground purple)
+   (all-the-icons-pink 				 :foreground pink)
+   (all-the-icons-orange			 :foreground orange)
 
 ;;;; php-mode
    (php-block-delimiter				 :foreground fg-3)
@@ -329,12 +382,13 @@
 
 ;;;; company-mode
    ;; TODO: These don't feel quite right
-   (company-tooltip                              :background bg+2 :inherit default)
+   (company-tooltip                              :background bg+1 :inherit default)
    (company-scrollbar-bg                         :background bg+1)
    (company-scrollbar-fg                         :background fg-1)
    (company-tooltip-annotation                   :foreground red)
    (company-tooltip-common                       :foreground yellow)
-   (company-tooltip-selection                    :background bg+1)
+   (company-box-selection 			 :foreground fg-1 :background bg+2)
+   (company-tooltip-selection                    :background bg+2)
    (company-preview-common                       :foreground fg-1 :background blue)
 
 
@@ -372,13 +426,22 @@
    (diff-hunk-header                             :foreground pink :background bg)
 
 ;;;; flycheck-mode
-   (flycheck-error                               :underline (:style wave :color red))
-   (flycheck-info                                :underline (:style wave :color yellow))
-   (flycheck-warning                             :underline (:style wave :color orange))
+   (flycheck-error                               :box (:line-width 1 :color red))
+   (flycheck-info                                :box (:line-width 1 :color yellow))
+   (flycheck-warning                             :box (:line-width 1 :color orange))
+   (flycheck-fringe-error 			 :foreground red)
+   (flycheck-fringe-info 			 :foreground yellow)
+   (flycheck-fringe-warning 			 :foreground orange)
 
+;;;; flymake-mode
+   
+   (flymake-error 				 :box (:line-width 1 :color red))
+   (flymake-warning 				 :box (:line-width 1 :color orange))
+   (flymake-note 				 :box (:line-width 1 :color yellow)) 
+   
 ;;;; flyspell-mode
-   (flyspell-duplicate                           :underline (:style wave :color orange))
-   (flyspell-incorrect                           :underline (:style wave :color red))
+   (flyspell-duplicate                           :box (:line-width 1 :color orange))
+   (flyspell-incorrect                           :box (:line-width 1 :color red))
 
 ;;;; hl-line-mode
    (hl-line                                      :background bg+1)
@@ -395,8 +458,8 @@
    (ido-vertical-match-face                      :foreground fg-1)
 
 ;;;; show-paren-mode
-   (show-paren-match                             :foreground nil :background nil :box (:line-width 1 :color green))
-   (show-paren-mismatch                          :foreground nil :background nil :box (:line-width 1 :color red))
+   (show-paren-match                             :weight bold :foreground green)
+   (show-paren-mismatch                          :weight bold :foreground red)
 
    ))
 
@@ -415,6 +478,7 @@
       (blue    (plist-get monokai-pro-theme-colors :blue))
       (magenta (plist-get monokai-pro-theme-colors :purple))
       (cyan    (plist-get monokai-pro-theme-colors :pink)))
+  
   (custom-theme-set-variables
    'monokai-pro
    `(ansi-color-names-vector
