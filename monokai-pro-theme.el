@@ -191,6 +191,13 @@
    (flyspell-duplicate                           :underline (:style wave :color orange))
    (flyspell-incorrect                           :underline (:style wave :color red))
 
+;;;; git-gutter-mode
+   (git-gutter:added                             :foreground green)
+   (git-gutter:deleted                           :foreground red)
+   (git-gutter:modified                          :foreground purple)
+   (git-gutter:separator                         :foreground blue)
+   (git-gutter:unchanged                         :background yellow)
+
 ;;;; hl-line-mode
    (hl-line                                      :background bg+1)
 
