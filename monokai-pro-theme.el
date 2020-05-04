@@ -150,7 +150,7 @@
 ;;;; mode-line
    (mode-line                                    :foreground fg-2 :background bg+1)
    (mode-line-buffer-id                          :foreground yellow :background nil)
-   (mode-line-emphasis                           :foreground fg-1 :slant italic)
+   (mode-line-emphasis                           :foreground fg-1)
    (mode-line-highlight                          :foreground fg :box nil :weight bold)
    (mode-line-inactive                           :foreground fg-2 :background bg+2)
 
