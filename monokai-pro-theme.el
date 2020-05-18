@@ -201,6 +201,9 @@
 ;;;; hl-line-mode
    (hl-line                                      :background bg+1)
 
+;;;; hl-todo-mode
+   (hl-todo                                      :slant italic :weight bold)
+
 ;;;; ido-mode
    ;; TODO: These don't feel quite right
    (ido-subdir                                   :foreground fg-2)
