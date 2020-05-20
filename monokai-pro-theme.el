@@ -167,7 +167,7 @@
    (company-tooltip-annotation                   :foreground red)
    (company-tooltip-common                       :foreground yellow)
    (company-tooltip-selection                    :background bg+1)
-   (company-preview-common                       :foreground fg-1 :background blue)
+   (company-preview-common                       :foreground blue :background bg+2)
 
 ;;;; diff-hl-mode
    (diff-hl-change                               :foreground blue)
