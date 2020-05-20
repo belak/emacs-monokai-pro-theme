@@ -219,6 +219,10 @@
    (show-paren-match                             :foreground fg :background blue)
    (show-paren-mismatch                          :background red :inverse-video t)
 
+;;;; selectrum
+   (selectrum-current-candidate                  :foreground orange)
+   (selectrum-completion-annotation              :foreground blue)
+
    ))
 
 ;; Anything leftover that doesn't fall neatly into a face goes here.
