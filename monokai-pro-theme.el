@@ -141,7 +141,7 @@
 
 ;;;; line-numbers
    (line-number                                  :foreground fg-2)
-   (line-number-current-line                     :foreground bg+2 :inverse-video t :inherit line-number)
+   (line-number-current-line                     :foreground fg :background bg+2)
 
 ;;;; linum-mode
    (linum                                        :foreground fg-3 :inherit fringe)
