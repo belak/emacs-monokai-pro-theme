@@ -32,7 +32,18 @@
     :green  "#a9dc76"
     :blue   "#78dce8"
     :purple "#ab9df2"
-    :pink   "#ff6188"))
+    :pink   "#ff6188"
+
+    ;; Colors from the original Monokai colorschemes. Some of these are used
+    ;; rarely as highlight colors. They should be avoided if possible.
+    :orig-red     "#f92672"
+    :orig-orange  "#fd971f"
+    :orig-yellow  "#e6db74"
+    :orig-green   "#a6e22e"
+    :orig-cyan    "#a1efe4"
+    :orig-blue    "#66d9ef"
+    :orig-violet  "#ae81ff"
+    :orig-magenta "#fd5ff0"))
 
 (defun monokai-pro-theme-transform-spec (spec colors)
   "Transform a theme `SPEC' into a face spec using `COLORS'."
@@ -215,6 +226,16 @@
 ;;;; ido-vertical-mode
    (ido-vertical-match-face                      :foreground fg-1)
 
+;;; org-mode
+   (org-level-1                                  :foreground orange)
+   (org-level-2                                  :foreground green)
+   (org-level-3                                  :foreground blue)
+   (org-level-4                                  :foreground yellow)
+   (org-level-5                                  :foreground orig-cyan)
+   (org-level-6                                  :foreground green)
+   (org-level-7                                  :foreground red)
+   (org-level-8                                  :foreground blue)
+
 ;;;; show-paren-mode
    (show-paren-match                             :foreground fg :background blue)
    (show-paren-mismatch                          :background red :inverse-video t)
@@ -233,7 +254,7 @@
       (yellow  (plist-get monokai-pro-theme-colors :yellow))
       (blue    (plist-get monokai-pro-theme-colors :blue))
       (magenta (plist-get monokai-pro-theme-colors :purple))
-      (cyan    (plist-get monokai-pro-theme-colors :pink)))
+      (cyan    (plist-get monokai-pro-theme-colors :orig-cyan)))
   (custom-theme-set-variables
    'monokai-pro
    `(ansi-color-names-vector
