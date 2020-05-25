@@ -1,9 +1,9 @@
 ;;; monokai-pro-theme.el --- A simple theme based on the Monokai Pro Sublime color schemes
 
-;; Copyright (C) 2019  Kaleb Elwert
+;; Copyright (C) 2019-2020  Kaleb Elwert
 
-;; Author: Kaleb Elwert <kaleb@coded.io>
-;; Maintainer: Kaleb Elwert <kaleb@coded.io>
+;; Author: Kaleb Elwert <belak@coded.io>
+;; Maintainer: Kaleb Elwert <belak@coded.io>
 ;; Version: 0.1
 ;; URL: https://github.com/belak/emacs-monokai-pro-theme
 
