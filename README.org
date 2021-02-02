@@ -61,10 +61,8 @@ which needs to be done. I use something similar to the following:
 
 This block assumes the repo is cloned to
 ~/.emacs.d/site-lisp/monokai-pro-theme. That needs to be added to the
-load path (along with specifying =:ensure nil= if needed so use-package
-doesn't try to grab the package from melpa). Additionally, the build
-directory needs to be added to the =custom-theme-load-path= to ensure
-load-theme can find the themes.
+load path (You may also need to specify =:ensure nil= so use-package
+doesn't try to grab the package from melpa).
 
 * Credits
 
