@@ -4,7 +4,7 @@
 
 ;; Author: Kaleb Elwert <belak@coded.io>
 ;; Maintainer: Kaleb Elwert <belak@coded.io>
-;; Version: 0.1
+;; Version: 0.2
 ;; URL: https://github.com/belak/emacs-monokai-pro-theme
 
 ;;; Commentary:
@@ -13,7 +13,7 @@
 
 ;;; Code:
 
-(defvar monokai-pro-theme-colors
+(defvar monokai-pro-theme-default-colors
   '(;; Background and foreground colors
     :bg     "#2d2a2e"
     :bg+1   "#353236"
@@ -86,183 +86,183 @@
                      (monokai-pro-theme-transform-face face colors))
                  faces)))
 
-(deftheme monokai-pro)
-(monokai-pro-theme-set-faces
- 'monokai-pro
- monokai-pro-theme-colors
-
- '(
+(defun monokai-pro-theme-define (theme-name theme-colors)
+  "Define the faces for a monokai-pro colorscheme given a `THEME-NAME' and a plist of `THEME-COLORS'."
+  (monokai-pro-theme-set-faces
+   theme-name
+   theme-colors
+   '(
 ;;; Built-in
 
 ;;;; basic colors
-   ;;(border                                       :background bg+2)
-   (cursor                                       :background fg)
-   (default                                      :foreground fg :background bg)
+     ;;(border                                       :background bg+2)
+     (cursor                                       :background fg)
+     (default                                      :foreground fg :background bg)
 
-   ;; TODO: bg matches what's in the sublime theme here, not bg+2
-   (fringe                                       :background bg+2)
+     ;; TODO: bg matches what's in the sublime theme here, not bg+2
+     (fringe                                       :background bg+2)
 
-   ;;(gui-element                                  :background bg+1)
-   (header-line                                  :background nil :inherit mode-line)
+     ;;(gui-element                                  :background bg+1)
+     (header-line                                  :background nil :inherit mode-line)
 
-   ;; TODO: This matches highlight and findHighlight, but we may want
-   ;; to look at findHighlightForeground which is simply bg.
-   (highlight                                    :foreground fg-3 :background bg+1)
+     ;; TODO: This matches highlight and findHighlight, but we may want
+     ;; to look at findHighlightForeground which is simply bg.
+     (highlight                                    :foreground fg-3 :background bg+1)
 
-   (link                                         :foreground blue :underline t)
-   (link-visited                                 :foreground purple :underline t)
+     (link                                         :foreground blue :underline t)
+     (link-visited                                 :foreground purple :underline t)
 
-   (minibuffer-prompt                            :foreground fg)
-   (region                                       :background bg+2)
-   (secondary-selection                          :background bg+2)
-   (trailing-whitespace                          :foreground fg :background red)
-   (whitespace-trailing                          :inherit trailing-whitespace)
-   (widget-button                                :underline t)
-   (widget-field                                 :background fg-1 :box (:line-width 1 :color bg+2))
+     (minibuffer-prompt                            :foreground fg)
+     (region                                       :background bg+2)
+     (secondary-selection                          :background bg+2)
+     (trailing-whitespace                          :foreground fg :background red)
+     (whitespace-trailing                          :inherit trailing-whitespace)
+     (widget-button                                :underline t)
+     (widget-field                                 :background fg-1 :box (:line-width 1 :color bg+2))
 
-   (error                                        :foreground red    :weight bold)
-   (warning                                      :foreground orange :weight bold)
-   (success                                      :foreground green  :weight bold)
+     (error                                        :foreground red    :weight bold)
+     (warning                                      :foreground orange :weight bold)
+     (success                                      :foreground green  :weight bold)
 
 ;;;; font-lock
-   (font-lock-builtin-face                       :foreground purple)
-   (font-lock-comment-delimiter-face             :foreground fg-3)
-   (font-lock-comment-face                       :foreground fg-3 :slant italic)
-   (font-lock-constant-face                      :foreground purple)
-   (font-lock-doc-face                           :foreground fg-3)
-   (font-lock-doc-string-face                    :foreground fg-3)
-   (font-lock-function-name-face                 :foreground green)
-   (font-lock-keyword-face                       :foreground pink)
-   ;;(font-lock-negation-char-face                 :foreground fg-1)
-   ;;(font-lock-preprocessor-face                  :foreground fg-1)
-   ;;(font-lock-regexp-grouping-backslash          :foreground fg-1)
-   ;;(font-lock-regexp-grouping-construct          :foreground fg)
-   (font-lock-string-face                        :foreground yellow)
-   (font-lock-type-face                          :foreground blue)
-   (font-lock-variable-name-face                 :foreground fg)
-   (font-lock-warning-face                       :foreground orange)
+     (font-lock-builtin-face                       :foreground purple)
+     (font-lock-comment-delimiter-face             :foreground fg-3)
+     (font-lock-comment-face                       :foreground fg-3 :slant italic)
+     (font-lock-constant-face                      :foreground purple)
+     (font-lock-doc-face                           :foreground fg-3)
+     (font-lock-doc-string-face                    :foreground fg-3)
+     (font-lock-function-name-face                 :foreground green)
+     (font-lock-keyword-face                       :foreground pink)
+     ;;(font-lock-negation-char-face                 :foreground fg-1)
+     ;;(font-lock-preprocessor-face                  :foreground fg-1)
+     ;;(font-lock-regexp-grouping-backslash          :foreground fg-1)
+     ;;(font-lock-regexp-grouping-construct          :foreground fg)
+     (font-lock-string-face                        :foreground yellow)
+     (font-lock-type-face                          :foreground blue)
+     (font-lock-variable-name-face                 :foreground fg)
+     (font-lock-warning-face                       :foreground orange)
 
 ;;;; isearch
-   (match                                        :foreground yellow :background bg :inverse-video t)
+     (match                                        :foreground yellow :background bg :inverse-video t)
 
-   ;; TODO: Revisit this - doesn't seem to map properly onto tmThemes
-   (isearch                                      :foreground bg :background yellow :weight bold)
-   (lazy-highlight                               :foreground fg-1 :inverse-video t)
-   (isearch-fail                                 :foreground red :background fg)
+     ;; TODO: Revisit this - doesn't seem to map properly onto tmThemes
+     (isearch                                      :foreground bg :background yellow :weight bold)
+     (lazy-highlight                               :foreground fg-1 :inverse-video t)
+     (isearch-fail                                 :foreground red :background fg)
 
 ;;;; line-numbers
-   (line-number                                  :foreground fg-2)
-   (line-number-current-line                     :foreground fg :background bg+2)
+     (line-number                                  :foreground fg-2)
+     (line-number-current-line                     :foreground fg :background bg+2)
 
 ;;;; linum-mode
-   (linum                                        :foreground fg-3 :inherit fringe)
-   (linum-highlight-face                         :foreground bg+2 :background fg-2)
+     (linum                                        :foreground fg-3 :inherit fringe)
+     (linum-highlight-face                         :foreground bg+2 :background fg-2)
 
 ;;;; mode-line
-   (mode-line                                    :foreground fg-2 :background bg+1)
-   (mode-line-buffer-id                          :foreground yellow :background nil)
-   (mode-line-emphasis                           :foreground fg-1)
-   (mode-line-highlight                          :foreground fg :box nil :weight bold)
-   (mode-line-inactive                           :foreground fg-2 :background bg+2)
+     (mode-line                                    :foreground fg-2 :background bg+1)
+     (mode-line-buffer-id                          :foreground yellow :background nil)
+     (mode-line-emphasis                           :foreground fg-1)
+     (mode-line-highlight                          :foreground fg :box nil :weight bold)
+     (mode-line-inactive                           :foreground fg-2 :background bg+2)
 
 ;;; Third-party
 
 ;;;; anzu-mode
-   ;;    (anzu-mode-line                               :foreground yellow)
+     ;;    (anzu-mode-line                               :foreground yellow)
 
 ;;;; company-mode
-   ;; TODO: These don't feel quite right
-   (company-tooltip                              :background bg+2 :inherit default)
-   (company-scrollbar-bg                         :background bg+1)
-   (company-scrollbar-fg                         :background fg-1)
-   (company-tooltip-annotation                   :foreground red)
-   (company-tooltip-common                       :foreground yellow)
-   (company-tooltip-selection                    :background bg+1)
-   (company-preview-common                       :foreground blue :background bg+2)
+     ;; TODO: These don't feel quite right
+     (company-tooltip                              :background bg+2 :inherit default)
+     (company-scrollbar-bg                         :background bg+1)
+     (company-scrollbar-fg                         :background fg-1)
+     (company-tooltip-annotation                   :foreground red)
+     (company-tooltip-common                       :foreground yellow)
+     (company-tooltip-selection                    :background bg+1)
+     (company-preview-common                       :foreground blue :background bg+2)
 
 ;;;; diff-hl-mode
-   (diff-hl-change                               :foreground blue)
-   (diff-hl-delete                               :foreground red)
-   (diff-hl-insert                               :foreground green)
+     (diff-hl-change                               :foreground blue)
+     (diff-hl-delete                               :foreground red)
+     (diff-hl-insert                               :foreground green)
 
 ;;;; diff-mode
-   (diff-added                                   :foreground green)
-   (diff-changed                                 :foreground purple)
-   (diff-removed                                 :foreground red)
-   (diff-header                                  :background bg)
-   (diff-file-header                             :background bg+1)
-   (diff-hunk-header                             :foreground pink :background bg)
+     (diff-added                                   :foreground green)
+     (diff-changed                                 :foreground purple)
+     (diff-removed                                 :foreground red)
+     (diff-header                                  :background bg)
+     (diff-file-header                             :background bg+1)
+     (diff-hunk-header                             :foreground pink :background bg)
 
 ;;;; flycheck-mode
-   (flycheck-error                               :underline (:style wave :color red))
-   (flycheck-info                                :underline (:style wave :color yellow))
-   (flycheck-warning                             :underline (:style wave :color orange))
+     (flycheck-error                               :underline (:style wave :color red))
+     (flycheck-info                                :underline (:style wave :color yellow))
+     (flycheck-warning                             :underline (:style wave :color orange))
 
 ;;;; flyspell-mode
-   (flyspell-duplicate                           :underline (:style wave :color orange))
-   (flyspell-incorrect                           :underline (:style wave :color red))
+     (flyspell-duplicate                           :underline (:style wave :color orange))
+     (flyspell-incorrect                           :underline (:style wave :color red))
 
 ;;;; git-gutter-mode
-   (git-gutter:added                             :foreground green)
-   (git-gutter:deleted                           :foreground red)
-   (git-gutter:modified                          :foreground purple)
-   (git-gutter:separator                         :foreground blue)
-   (git-gutter:unchanged                         :background yellow)
+     (git-gutter:added                             :foreground green)
+     (git-gutter:deleted                           :foreground red)
+     (git-gutter:modified                          :foreground purple)
+     (git-gutter:separator                         :foreground blue)
+     (git-gutter:unchanged                         :background yellow)
 
 ;;;; hl-line-mode
-   (hl-line                                      :background bg+1)
+     (hl-line                                      :background bg+1)
 
 ;;;; hl-todo-mode
-   (hl-todo                                      :slant italic :weight bold)
+     (hl-todo                                      :slant italic :weight bold)
 
 ;;;; ido-mode
-   ;; TODO: These don't feel quite right
-   (ido-subdir                                   :foreground fg-2)
-   (ido-first-match                              :foreground orange)
-   (ido-only-match                               :foreground green)
-   (ido-indicator                                :foreground red :background bg+2)
-   (ido-virtual                                  :foreground fg-2)
+     ;; TODO: These don't feel quite right
+     (ido-subdir                                   :foreground fg-2)
+     (ido-first-match                              :foreground orange)
+     (ido-only-match                               :foreground green)
+     (ido-indicator                                :foreground red :background bg+2)
+     (ido-virtual                                  :foreground fg-2)
 
 ;;;; ido-vertical-mode
-   (ido-vertical-match-face                      :foreground fg-1)
+     (ido-vertical-match-face                      :foreground fg-1)
 
 ;;; org-mode
-   (org-level-1                                  :foreground orange)
-   (org-level-2                                  :foreground green)
-   (org-level-3                                  :foreground blue)
-   (org-level-4                                  :foreground yellow)
-   (org-level-5                                  :foreground orig-cyan)
-   (org-level-6                                  :foreground green)
-   (org-level-7                                  :foreground red)
-   (org-level-8                                  :foreground blue)
+     (org-level-1                                  :foreground orange)
+     (org-level-2                                  :foreground green)
+     (org-level-3                                  :foreground blue)
+     (org-level-4                                  :foreground yellow)
+     (org-level-5                                  :foreground orig-cyan)
+     (org-level-6                                  :foreground green)
+     (org-level-7                                  :foreground red)
+     (org-level-8                                  :foreground blue)
 
 ;;;; show-paren-mode
-   (show-paren-match                             :foreground fg :background blue)
-   (show-paren-mismatch                          :background red :inverse-video t)
+     (show-paren-match                             :foreground fg :background blue)
+     (show-paren-mismatch                          :background red :inverse-video t)
 
 ;;;; selectrum
-   (selectrum-current-candidate                  :foreground orange)
-   (selectrum-completion-annotation              :foreground blue)
+     (selectrum-current-candidate                  :foreground orange)
+     (selectrum-completion-annotation              :foreground blue)
 
-   ))
+     ))
 
-;; Anything leftover that doesn't fall neatly into a face goes here.
-(let ((bg      (plist-get monokai-pro-theme-colors :bg))
-      (fg      (plist-get monokai-pro-theme-colors :fg))
-      (red     (plist-get monokai-pro-theme-colors :red))
-      (green   (plist-get monokai-pro-theme-colors :green))
-      (yellow  (plist-get monokai-pro-theme-colors :yellow))
-      (blue    (plist-get monokai-pro-theme-colors :blue))
-      (magenta (plist-get monokai-pro-theme-colors :purple))
-      (cyan    (plist-get monokai-pro-theme-colors :orig-cyan)))
-  (custom-theme-set-variables
-   'monokai-pro
-   `(ansi-color-names-vector
-     ;; black, base08, base0B, base0A, base0D, magenta, cyan, white
-     [,bg ,red ,green ,yellow ,blue ,magenta ,cyan ,fg])
-   `(ansi-term-color-vector
-     ;; black, base08, base0B, base0A, base0D, magenta, cyan, white
-     [unspecified ,bg ,red ,green ,yellow ,blue ,magenta ,cyan ,fg])))
+  ;; Anything leftover that doesn't fall neatly into a face goes here.
+  (let ((bg      (plist-get theme-colors :bg))
+        (fg      (plist-get theme-colors :fg))
+        (red     (plist-get theme-colors :red))
+        (green   (plist-get theme-colors :green))
+        (yellow  (plist-get theme-colors :yellow))
+        (blue    (plist-get theme-colors :blue))
+        (magenta (plist-get theme-colors :purple))
+        (cyan    (plist-get theme-colors :orig-cyan)))
+    (custom-theme-set-variables
+     'monokai-pro
+     `(ansi-color-names-vector
+       ;; black, base08, base0B, base0A, base0D, magenta, cyan, white
+       [,bg ,red ,green ,yellow ,blue ,magenta ,cyan ,fg])
+     `(ansi-term-color-vector
+       ;; black, base08, base0B, base0A, base0D, magenta, cyan, white
+       [unspecified ,bg ,red ,green ,yellow ,blue ,magenta ,cyan ,fg]))))
 
 ;;;###autoload
 (and load-file-name
@@ -271,6 +271,8 @@
                   (file-name-as-directory
                    (file-name-directory load-file-name))))
 
+(deftheme monokai-pro)
+(monokai-pro-theme-define 'monokai-pro monokai-pro-theme-default-colors)
 (provide-theme 'monokai-pro)
 
 (provide 'monokai-pro-theme)

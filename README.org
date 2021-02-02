@@ -39,6 +39,12 @@ The use-package block is fairly similar to package.el.
 Note that use-package tries to defer packages if at all possible, so
 you may need to add =:demand= to the use-package block.
 
+** Variants
+
+All of the variants are available as separate themes. Simply use =load-theme=
+with the proper flavor: =monokai-pro-classic=, =monokai-pro-machine=,
+=monokai-pro-octagon=, =monokai-pro-ristretto=, or =monokai-pro-spectrum=.
+
 ** Development
 
 Above, there's a use-package block listed for general use, but if you
