@@ -99,8 +99,7 @@
      (cursor                                       :background fg)
      (default                                      :foreground fg :background bg)
 
-     ;; TODO: bg matches what's in the sublime theme here, not bg+2
-     (fringe                                       :background bg+2)
+     (fringe                                       :background bg)
 
      ;;(gui-element                                  :background bg+1)
      (header-line                                  :background nil :inherit mode-line)
@@ -116,6 +115,7 @@
      (region                                       :background bg+2)
      (secondary-selection                          :background bg+2)
      (trailing-whitespace                          :foreground fg :background red)
+     (vertical-border                              :foreground bg+1)
      (whitespace-trailing                          :inherit trailing-whitespace)
      (widget-button                                :underline t)
      (widget-field                                 :background fg-1 :box (:line-width 1 :color bg+2))
@@ -165,19 +165,38 @@
      (mode-line-highlight                          :foreground fg :box nil :weight bold)
      (mode-line-inactive                           :foreground fg-2 :background bg+2)
 
+;;;; term
+     (term-color-black                             :foreground bg+1)
+     (term-color-blue                              :foreground blue)
+     (term-color-cyan                              :foreground purple)
+     (term-color-green                             :foreground green)
+     (term-color-magenta                           :foreground pink)
+     (term-color-red                               :foreground red)
+     (term-color-white                             :foreground fg)
+     (term-color-yellow                            :foreground yellow)
+
 ;;; Third-party
+
+;;;; all-the-icons
+     (all-the-icons-red                            :foreground red)
+     (all-the-icons-blue                           :foreground blue)
+     (all-the-icons-green                          :foreground green)
+     (all-the-icons-yellow                         :foreground yellow)
+     (all-the-icons-purple                         :foreground purple)
+     (all-the-icons-pink                           :foreground pink)
+     (all-the-icons-orange                         :foreground orange)
 
 ;;;; anzu-mode
      ;;    (anzu-mode-line                               :foreground yellow)
 
 ;;;; company-mode
-     ;; TODO: These don't feel quite right
-     (company-tooltip                              :background bg+2 :inherit default)
+     (company-box-selection                        :foreground fg-1 :background bg+2)
+     (company-tooltip                              :background bg+1 :inherit default)
      (company-scrollbar-bg                         :background bg+1)
      (company-scrollbar-fg                         :background fg-1)
      (company-tooltip-annotation                   :foreground red)
      (company-tooltip-common                       :foreground yellow)
-     (company-tooltip-selection                    :background bg+1)
+     (company-tooltip-selection                    :background bg+2)
      (company-preview-common                       :foreground blue :background bg+2)
 
 ;;;; diff-hl-mode
@@ -197,6 +216,14 @@
      (flycheck-error                               :underline (:style wave :color red))
      (flycheck-info                                :underline (:style wave :color yellow))
      (flycheck-warning                             :underline (:style wave :color orange))
+     (flycheck-fringe-error                        :foreground red)
+     (flycheck-fringe-info                         :foreground yellow)
+     (flycheck-fringe-warning                      :foreground orange)
+
+;;;; flymake-mode
+     (flymake-error                                :underline (:style wave :color red))
+     (flymake-note                                 :underline (:style wave :color yellow))
+     (flymake-warning                              :underline (:style wave :color orange))
 
 ;;;; flyspell-mode
      (flyspell-duplicate                           :underline (:style wave :color orange))
@@ -226,6 +253,50 @@
 ;;;; ido-vertical-mode
      (ido-vertical-match-face                      :foreground fg-1)
 
+;;;; ivy
+     (ivy-action                                   :foreground purple)
+     (ivy-confirm-face                             :foreground green)
+     (ivy-current-match                            :foreground bg :background yellow)
+     (ivy-cursor                                   :foreground bg :background fg)
+     (ivy-grep-info                                :foreground pink)
+     (ivy-grep-line-number                         :foreground red)
+     (ivy-highlight-face                           :background bg+1 :foreground fg-1)
+     (ivy-match-required-face                      :foreground red)
+     (ivy-minibuffer-match-face-1                  :foreground fg :background bg+1)
+     (ivy-minibuffer-match-face-2                  :foreground fg :background bg+2)
+     (ivy-minibuffer-match-face-3                  :foreground fg :background purple)
+     (ivy-minibuffer-match-face-4                  :foreground fg :background pink)
+     (ivy-minibuffer-match-highlight               :foreground fg-4 :background bg+1)
+     (ivy-modified-buffer                          :foreground fg)
+     (ivy-modified-outside-buffer                  :foreground fg)
+     (ivy-org                                      :foreground bg+1 :slant italic)
+     (ivy-prompt-match                             :foreground bg :background yellow)
+     (ivy-remote                                   :foreground purple)
+     (ivy-separator                                :foreground bg+1)
+     (ivy-subdir                                   :foreground green)
+     (ivy-virtual                                  :foreground purple)
+     (ivy-yanked-word                              :foreground fg-4 :background bg+1)
+     (swiper-background-match-face-1               :foreground bg :background fg)
+     (swiper-background-match-face-2               :foreground bg :background yellow)
+     (swiper-background-match-face-3               :foreground bg :background yellow :weight bold)
+     (swiper-background-match-face-4               :foreground red :background fg)
+     (swiper-match-face-1                          :foreground bg :background fg)
+     (swiper-match-face-2                          :foreground bg :background yellow)
+     (swiper-match-face-3                          :foreground bg :background yellow :weight bold)
+     (swiper-match-face-4                          :foreground red :background fg)
+     (swiper-line-face                             :foreground bg+2 :background bg+1)
+
+;;; lsp-ui
+     (lsp-ui-doc-background                        :background bg+1)
+     (lsp-ui-peek-filename                         :foreground orange)
+     (lsp-ui-peek-header                           :foreground bg :background fg)
+     (lsp-ui-peek-footer                           :foreground bg :background fg)
+     (lsp-ui-peek-peek                             :foreground fg :background bg+1)
+     (lsp-ui-peek-highlight                        :foreground fg-1)
+     (lsp-ui-peek-selection                        :foreground fg-1 :background bg+2)
+     (lsp-ui-peek-list                             :background bg+1)
+     (lsp-ui-peek-line-number                      :foreground red)
+
 ;;; org-mode
      (org-level-1                                  :foreground orange)
      (org-level-2                                  :foreground green)
@@ -236,9 +307,79 @@
      (org-level-7                                  :foreground red)
      (org-level-8                                  :foreground blue)
 
+;;;; php-mode
+     (php-block-delimiter                          :foreground fg-3)
+     (php-block-statement                          :foreground red)
+     (php-class-declaration-spec                   :foreground red)
+     (php-class-modifiers                          :foreground red)
+     (php-constant-assign                          :foreground red)
+     (php-constant-keyword                         :foreground purple)
+     (php-flow-control-statement                   :foreground red)
+     (php-import-declaration                       :foreground red)
+     (php-include-statement                        :foreground green)
+     (php-method-access                            :foreground red :slant italic)
+     (php-method-modifiers                         :foreground red :slant italic)
+     (php-method-static                            :foreground red :slant italic)
+     (php-namespace-declaration                    :foreground red)
+     (php-number                                   :foreground purple)
+     (php-php-tag                                  :foreground orange)
+     (php-print-statement                          :foreground green)
+     (php-property-access                          :foreground red :slant italic)
+     (php-property-const                           :foreground red :slant italic)
+     (php-property-static                          :foreground red :slant italic)
+     (php-string-quote                             :foreground fg-3)
+     (php-type-operator                            :foreground red)
+     (php-function-keyword                         :foreground blue :slant italic)
+
+     (php-function-name                            :foreground green)
+     (php-function-call                            :foreground green)
+     (php-string                                   :foreground yellow)
+     (php-keyword                                  :foreground blue)
+     (php-builtin                                  :foreground purple)
+     (php-method-call                              :foreground green)
+     (php-static-method-call                       :foreground green)
+     (php-variable-name                            :foreground fg)
+     (php-property-name                            :foreground fg)
+     (php-variable-sigil                           :foreground fg-2)
+     (php-operator                                 :foreground red)
+     (php-paamayim-nekudotayim                     :foreground red)
+     (php-type                                     :foreground blue :slant italic)
+     (php-class                                    :foreground red)
+     (php-constant                                 :foreground purple)
+     (php-constant-assign                          :foreground blue)
+     (php-magical-constant                         :foreground purple)
+     (php-$this                                    :foreground fg-2 :slant italic)
+     (php-$this-sigil                              :foreground fg-2 :slant italic)
+     (php-errorcontrol-op                          :foreground red)
+     (php-doc-annotation-tag                       :foreground blue)
+     (php-doc-variable-sigil                       :foreground fg-4)
+     (php-doc-$this                                :foreground fg-4)
+     (php-doc-$this-sigil                          :foreground fg-4)
+     (php-doc-class-name                           :foreground fg-4)
+
+;;;; popup
+     (popup-menu-selection-face                    :background bg+1)
+     (popup-summary-face                           :background bg+2 :inherit default)
+     (popup-menu-face                              :background bg+2)
+     (popup-menu-mouse-face                        :background bg+1)
+     (popup-tip-face                               :background bg+2)
+     (popup-scroll-bar-background-face             :background bg+1)
+     (popup-scroll-bar-foreground-face             :background fg-1)
+
+;;;; rainbow-delimiters
+     (rainbow-delimiters-depth-1-face              :foreground red)
+     (rainbow-delimiters-depth-2-face              :foreground pink)
+     (rainbow-delimiters-depth-3-face              :foreground orange)
+     (rainbow-delimiters-depth-4-face              :foreground yellow)
+     (rainbow-delimiters-depth-5-face              :foreground green)
+     (rainbow-delimiters-depth-6-face              :foreground blue)
+     (rainbow-delimiters-depth-7-face              :foreground purple)
+     (rainbow-delimiters-depth-8-face              :foreground fg-1)
+     (rainbow-delimiters-depth-9-face              :foreground fg)
+
 ;;;; show-paren-mode
-     (show-paren-match                             :foreground fg :background blue)
-     (show-paren-mismatch                          :background red :inverse-video t)
+     (show-paren-match                             :foreground green)
+     (show-paren-mismatch                          :foreground red)
 
 ;;;; selectrum
      (selectrum-current-candidate                  :foreground orange)
