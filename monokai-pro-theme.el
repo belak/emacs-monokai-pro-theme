@@ -113,6 +113,7 @@
 
      (minibuffer-prompt                            :foreground fg)
      (region                                       :background bg+2)
+     (shadow                                       :foreground fg-2)
      (secondary-selection                          :background bg+2)
      (trailing-whitespace                          :foreground fg :background red)
      (vertical-border                              :foreground bg+1)
@@ -164,6 +165,11 @@
      (mode-line-emphasis                           :foreground fg-1)
      (mode-line-highlight                          :foreground fg :box nil :weight bold)
      (mode-line-inactive                           :foreground fg-2 :background bg+2)
+
+;;;; tab-bar
+     (tab-bar                                      :background bg)
+     (tab-bar-tab                                  :foreground yellow :underline t :weight semi-bold :inherit tab-bar)
+     (tab-bar-tab-inactive                         :foreground fg-1 :inherit tab-bar)
 
 ;;;; term
      (term-color-black                             :foreground bg+1)
@@ -242,6 +248,9 @@
 ;;;; hl-todo-mode
      (hl-todo                                      :slant italic :weight bold)
 
+;;;; info
+     (info-menu-star                               :foreground red)
+
 ;;;; ido-mode
      ;; TODO: These don't feel quite right
      (ido-subdir                                   :foreground fg-2)
@@ -306,6 +315,8 @@
      (org-level-6                                  :foreground green)
      (org-level-7                                  :foreground red)
      (org-level-8                                  :foreground blue)
+     (org-document-info                            :foreground fg)
+     (org-document-title                           :weight bold :inherit org-document-info)
 
 ;;;; php-mode
      (php-block-delimiter                          :foreground fg-3)
@@ -367,19 +378,20 @@
      (popup-scroll-bar-foreground-face             :background fg-1)
 
 ;;;; rainbow-delimiters
-     (rainbow-delimiters-depth-1-face              :foreground red)
-     (rainbow-delimiters-depth-2-face              :foreground pink)
-     (rainbow-delimiters-depth-3-face              :foreground orange)
-     (rainbow-delimiters-depth-4-face              :foreground yellow)
-     (rainbow-delimiters-depth-5-face              :foreground green)
-     (rainbow-delimiters-depth-6-face              :foreground blue)
-     (rainbow-delimiters-depth-7-face              :foreground purple)
-     (rainbow-delimiters-depth-8-face              :foreground fg-1)
-     (rainbow-delimiters-depth-9-face              :foreground fg)
+     (rainbow-delimiters-depth-1-face              :inherit rainbow-deminiters-base-face :foreground red)
+     (rainbow-delimiters-depth-2-face              :inherit rainbow-deminiters-base-face :foreground pink)
+     (rainbow-delimiters-depth-3-face              :inherit rainbow-deminiters-base-face :foreground orange)
+     (rainbow-delimiters-depth-4-face              :inherit rainbow-deminiters-base-face :foreground yellow)
+     (rainbow-delimiters-depth-5-face              :inherit rainbow-deminiters-base-face :foreground green)
+     (rainbow-delimiters-depth-6-face              :inherit rainbow-deminiters-base-face :foreground blue)
+     (rainbow-delimiters-depth-7-face              :inherit rainbow-deminiters-base-face :foreground purple)
+     (rainbow-delimiters-depth-8-face              :inherit rainbow-deminiters-base-face :foreground fg-1)
+     (rainbow-delimiters-depth-9-face              :inherit rainbow-deminiters-base-face :foreground fg)
+     (rainbow-delimiters-unmatched-face            :inherit (rainbow-delimiters-base-face show-paren-mismatch))
 
 ;;;; show-paren-mode
-     (show-paren-match                             :foreground green)
-     (show-paren-mismatch                          :foreground red)
+     (show-paren-match                             :underline t :weight bold)
+     (show-paren-mismatch                          :foreground fg :background orig-red :weight bold)
 
 ;;;; selectrum
      (selectrum-current-candidate                  :foreground orange)
