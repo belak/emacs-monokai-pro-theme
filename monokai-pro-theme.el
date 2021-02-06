@@ -387,7 +387,7 @@
      (rainbow-delimiters-depth-7-face              :inherit rainbow-delimiters-base-face :foreground purple)
      (rainbow-delimiters-depth-8-face              :inherit rainbow-delimiters-base-face :foreground fg-1)
      (rainbow-delimiters-depth-9-face              :inherit rainbow-delimiters-base-face :foreground fg)
-     (rainbow-delimiters-unmatched-face            :inherit (rainbow-delimiters-base-face show-paren-mismatch))
+     (rainbow-delimiters-unmatched-face            :inherit (show-paren-mismatch rainbow-delimiters-base-face))
 
 ;;;; show-paren-mode
      (show-paren-match                             :underline t :weight bold)
