@@ -378,15 +378,15 @@
      (popup-scroll-bar-foreground-face             :background fg-1)
 
 ;;;; rainbow-delimiters
-     (rainbow-delimiters-depth-1-face              :inherit rainbow-deminiters-base-face :foreground red)
-     (rainbow-delimiters-depth-2-face              :inherit rainbow-deminiters-base-face :foreground pink)
-     (rainbow-delimiters-depth-3-face              :inherit rainbow-deminiters-base-face :foreground orange)
-     (rainbow-delimiters-depth-4-face              :inherit rainbow-deminiters-base-face :foreground yellow)
-     (rainbow-delimiters-depth-5-face              :inherit rainbow-deminiters-base-face :foreground green)
-     (rainbow-delimiters-depth-6-face              :inherit rainbow-deminiters-base-face :foreground blue)
-     (rainbow-delimiters-depth-7-face              :inherit rainbow-deminiters-base-face :foreground purple)
-     (rainbow-delimiters-depth-8-face              :inherit rainbow-deminiters-base-face :foreground fg-1)
-     (rainbow-delimiters-depth-9-face              :inherit rainbow-deminiters-base-face :foreground fg)
+     (rainbow-delimiters-depth-1-face              :inherit rainbow-delimiters-base-face :foreground red)
+     (rainbow-delimiters-depth-2-face              :inherit rainbow-delimiters-base-face :foreground pink)
+     (rainbow-delimiters-depth-3-face              :inherit rainbow-delimiters-base-face :foreground orange)
+     (rainbow-delimiters-depth-4-face              :inherit rainbow-delimiters-base-face :foreground yellow)
+     (rainbow-delimiters-depth-5-face              :inherit rainbow-delimiters-base-face :foreground green)
+     (rainbow-delimiters-depth-6-face              :inherit rainbow-delimiters-base-face :foreground blue)
+     (rainbow-delimiters-depth-7-face              :inherit rainbow-delimiters-base-face :foreground purple)
+     (rainbow-delimiters-depth-8-face              :inherit rainbow-delimiters-base-face :foreground fg-1)
+     (rainbow-delimiters-depth-9-face              :inherit rainbow-delimiters-base-face :foreground fg)
      (rainbow-delimiters-unmatched-face            :inherit (rainbow-delimiters-base-face show-paren-mismatch))
 
 ;;;; show-paren-mode
