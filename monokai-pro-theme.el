@@ -102,7 +102,7 @@
      (fringe                                       :background bg)
 
      ;;(gui-element                                  :background bg+1)
-     (header-line                                  :background nil :inherit mode-line)
+     (header-line                                  :background unspecified :inherit mode-line)
 
      ;; TODO: This matches highlight and findHighlight, but we may want
      ;; to look at findHighlightForeground which is simply bg.
@@ -161,7 +161,7 @@
 
 ;;;; mode-line
      (mode-line                                    :foreground fg-2 :background bg+1)
-     (mode-line-buffer-id                          :foreground yellow :background nil)
+     (mode-line-buffer-id                          :foreground yellow :background unspecified)
      (mode-line-emphasis                           :foreground fg-1)
      (mode-line-highlight                          :foreground fg :box nil :weight bold)
      (mode-line-inactive                           :foreground fg-2 :background bg+2)
