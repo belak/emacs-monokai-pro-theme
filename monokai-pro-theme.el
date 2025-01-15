@@ -119,7 +119,7 @@
      (vertical-border                              :foreground bg+1)
      (whitespace-trailing                          :inherit trailing-whitespace)
      (widget-button                                :underline t)
-     (widget-field                                 :background fg-1 :box (:line-width 1 :color bg+2))
+     (widget-field                                 :foreground bg+1 :background fg-1 :box (:line-width 1 :color bg+2))
 
      (error                                        :foreground red    :weight bold)
      (warning                                      :foreground orange :weight bold)
